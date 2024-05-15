@@ -58,7 +58,7 @@ int main(int argc, char** argv)
                 // sono il processo figlio e non devo rimanere in ascolto: deve invece comunicare i dati inviati dal client al serverV
                 close(listenfd);
             
-                // imposta l'ultimo carattere col quello di fine stringa
+                // imposta l'ultimo carattere con quello di fine stringa
                 buf[bytesRead]=0;
 
                 strcpy(tmpGreenPass.code, buf);
@@ -69,8 +69,6 @@ int main(int argc, char** argv)
                 printf("2 - Ricevuto nuovo Green pass %s, valido per %d giorni... lo invio a ServerV\n", tmpGreenPass.code, tmpGreenPass.valid);
                 //invia questa struttura al server
                 FullWrite(servVfd, &tmpGreenPass, sizeof(GreenPass));
-
-                //printf("3 - Ho fatto la full write... ho scritto %ld byte \n", sizeof(GreenPass));
                 
                 //chiude canale di comunicazione col client
                 close(connfd);

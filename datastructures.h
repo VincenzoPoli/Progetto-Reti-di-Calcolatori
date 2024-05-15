@@ -54,39 +54,4 @@ typedef struct
     int contagiato;                 //1 se contagiato, 0 se guarito
 } UtenteContagiato;
 
-/*
-typedef struct
-{
-    char code[CODE_SIZE + 1];//codice della tessera sanitaria
-    
-    int contagiato;
-    
-    
-} GreenPass;
-*/
 
-/*
-void printDate(struct tm timeStamp)
-{
-    printf("Ora: %d-%02d-%02d %02d:%02d:%02d\n", timeStamp.tm_year + 1900, timeStamp.tm_mon + 1, timeStamp.tm_mday, timeStamp.tm_hour, timeStamp.tm_min, timeStamp.tm_sec);
-}
-
-void printDate(struct tm timeStamp)
-{
-    printf("Ora: %d-%02d-%02d %02d:%02d:%02d\n", timeStamp.tm_year + 1900, timeStamp.tm_mon + 1, timeStamp.tm_mday, timeStamp.tm_hour, timeStamp.tm_min, timeStamp.tm_sec);
-}
-
-GreenPass gp; //dichiaro un green pass
-gp.t = time(NULL); //inizializzazione della variabile tempo del green pass
-gp.timeStamp = *localtime(&gp.t); //ottengo la data attuale e la salvo nel campo apposito del green pass
-
-time_t t = time(NULL); //inizializzazione della variabile tempo 
-struct tm oggi = *localtime(&t); //ottengo la data attuale e la salvo in now
-
-time_t dataRilascio = mktime(&gp.timeStamp); //così si converte il timeStamp in numero di secondi
-time_t dataOggi = mktime(&oggi);
-time_t differenza = dataOggi-dataRilasio;
-
-if (differenza >= gp.valid) //eccetera eccetera
-
-*/
